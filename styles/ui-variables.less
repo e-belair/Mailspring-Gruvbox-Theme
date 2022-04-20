@@ -4,49 +4,88 @@ https://github.com/Foundry376/Mailspring/blob/master/app/static/style/base/ui-va
 */
 @import "base/ui-variables";
 
-@gray-base: #ffffff;
-@gray-darker: darken(@gray-base, 13.5%);
-@gray-dark: darken(@gray-base, 20%);
-@gray: darken(@gray-base, 33.5%);
-@gray-light: darken(@gray-base, 46.7%);
-@gray-lighter: darken(@gray-base, 92.5%);
-@white: #0a0a0a;
+/**
+Gruvbox Dark Palette
+https://github.com/morhetz/gruvbox
+*/
+@g-red: #fb4934;
+@g-red-dark: #cc241d;
+@g-green: #b8bb26;
+@g-green-dark: #98971a;
+@g-yellow: #fabd2f;
+@g-yellow-dark: #d79921;
+@g-orange: #fe8019;
+@g-orange-dark: #d65d0e;
+@g-blue: #83a598;
+@g-blue-dark: #458588;
+@g-purple: #d3869b;
+@g-purple-dark: #b16286;
+@g-aqua: #8ec07c;
+@g-aqua-dark: #689d6a;
+@g-gray: #a89984;
+@g-gray0: #928374;
+@g-gray1: #928374;
 
-@accent-primary: #58b660;
-@accent-primary-dark: darken(@accent-primary, 10%);
+@g-bg: #282828;
+@g-bg0: #282828;
+@g-bg0h: #1d2021;
+@g-bg0s: #32302f;
+@g-bg1: #3c3836;
+@g-bg2: #504945;
+@g-bg3: #665c54;
+@g-bg4: #7c6f64;
 
-@background-primary: #212121;
-@background-off-primary: #212121;
-@background-secondary: #121212;
-@background-tertiary: #6d7987;
+@g-fg: #ebdbb2;
+@g-fg0: #fbf1c7;
+@g-fg1: #ebdbb2;
+@g-fg2: #d5c4a1;
+@g-fg3: #bdae93;
+@g-fg4: #a89984;
 
-@border-color-primary: lighten(@background-primary, 10%);
-@border-color-secondary: lighten(@background-secondary, 10%);
-@border-color-tertiary: lighten(@background-tertiary, 10%);
+@gray-base: @g-fg0;
+@gray-darker: @g-fg1;
+@gray-dark: @g-fg2;
+@gray: @g-fg3;
+@gray-light: @g-fg4;
+@gray-lighter: @g-gray;
+@white: @g-bg0h;
+/** end gruv palette **/
+
+@accent-primary: @g-green;
+@accent-primary-dark: @g-green-dark;
+
+@background-primary: @g-bg;
+@background-off-primary: @g-bg;
+@background-secondary: @g-bg0h;
+@background-tertiary: @g-gray;
+
+@border-color-primary: @g-bg1;
+@border-color-secondary: @g-bg1;
+@border-color-tertiary: @g-bg1;
 @border-color-divider: @border-color-secondary;
 
-@text-color: #eee;
+@text-color: @g-fg;
 @text-color-subtle: fadeout(@text-color, 20%);
 @text-color-very-subtle: fadeout(@text-color, 40%);
-@text-color-inverse: white;
+@text-color-inverse: @g-fg0;
 @text-color-inverse-subtle: fadeout(@text-color-inverse, 20%);
 @text-color-inverse-very-subtle: fadeout(@text-color-inverse, 50%);
-@text-color-heading: #fff;
+@text-color-heading: @g-fg0;
 
 @text-color-link: @accent-primary;
 @text-color-link-hover: @accent-primary-dark;
 @text-color-link-active: @accent-primary-dark;
 
 @btn-default-bg-color: lighten(@background-primary, 5%);
-@dropdown-default-bg-color: #404040;
+@dropdown-default-bg-color: @g-bg2;
 
-@input-bg: #2e2e2e;
+@input-bg: @g-bg1;
 @input-border: @border-color-divider;
 
-@list-bg: #333;
-@list-border: #383838;
+@list-bg: @g-bg;
+@list-border: @g-bg0;
 @list-selected-color: @text-color-inverse;
 @list-focused-color: @text-color;
 
-@toolbar-background-color: #121212;
-@panel-background-color: #121212;
+@toolbar-background-color: @g-bg0h;
+@panel-background-color: @g-bg0h;
