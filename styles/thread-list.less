@@ -12,6 +12,13 @@
   background-image: url("mailspring://theme-gruvbox/images/thread-list/icon-unread-@2x.png");
 }
 
+.column-ThreadList {
+  // separator between message list and message content hard coded ...
+  div[style*="border-top"] {
+    border-top-color: @g-bg1 !important;
+  }
+}
+
 .thread-list {
   .list-item {
     .list-column-HoverActions {
