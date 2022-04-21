@@ -21,18 +21,43 @@
 
 .thread-list {
   .list-item {
-    .list-column-HoverActions {
+    &:not(.focused):hover {
+      .list-column-HoverActions {
+        .inner {
+          .action.action-snooze {
+            background: url('mailspring://theme-gruvbox/images/thread-list-quick-actions/ic-quickaction-snooze@2x.png') center no-repeat, linear-gradient(to top, @gray-darker 0%, @gray-base 100%);
+          }
 
-      .action.action-snooze {
-        background: url('mailspring://theme-gruvbox/images/thread-list-quick-actions/ic-quickaction-snooze@2x.png') center no-repeat, linear-gradient(to top, @gray-darker 0%, @gray-base 100%);
+          .action.action-trash {
+            background: url('mailspring://theme-gruvbox/images/thread-list-quick-actions/ic-quick-button-trash@2x.png') center no-repeat, linear-gradient(to top, @gray-darker 0%, @gray-base 100%);
+          }
+
+          .action.action-archive {
+            background: url('../static/images/thread-list-quick-actions/ic-quick-button-archive@2x.png') center no-repeat, linear-gradient(to top, @gray-darker 0%, @gray-base 100%);
+          }
+        }
       }
+    }
 
-      .action.action-trash {
-        background: url('mailspring://theme-gruvbox/images/thread-list-quick-actions/ic-quick-button-trash@2x.png') center no-repeat, linear-gradient(to top, @gray-darker 0%, @gray-base 100%);
-      }
-
-      .action.action-archive {
-        background: url('../static/images/thread-list-quick-actions/ic-quick-button-archive@2x.png') center no-repeat, linear-gradient(to top, @gray-darker 0%, @gray-base 100%);
+    &.focused:hover {
+      .list-column-HoverActions {
+        .inner {
+          // todo images has different dark colors, so the filter works improperly
+          //.action.action-snooze {
+          //  background: url('../static/images/thread-list-quick-actions/ic-quickaction-snooze@2x.png') center no-repeat;
+          //  filter: invert(85%) sepia(41%) saturate(198%) hue-rotate(351deg) brightness(105%) contrast(97%);
+          //}
+          //
+          //.action.action-trash {
+          //  background: url('../static/images/thread-list-quick-actions/ic-quick-button-trash@2x.png') center no-repeat;
+          //  filter: invert(85%) sepia(41%) saturate(198%) hue-rotate(351deg) brightness(105%) contrast(97%);
+          //}
+          //
+          //.action.action-archive {
+          //  background: url('../static/images/thread-list-quick-actions/ic-quick-button-archive@2x.png') center no-repeat;
+          //  filter: invert(85%) sepia(41%) saturate(198%) hue-rotate(351deg) brightness(105%) contrast(97%);
+          //}
+        }
       }
     }
   }
