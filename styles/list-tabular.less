@@ -1,8 +1,30 @@
+@import "ui-variables";
+
 .list-tabular {
   .list-tabular-item {
     &.selected {
       .checkmark .inner {
         background-image: url(mailspring://theme-gruvbox/images/thread-list/checkbox-checkmark@2x.png);
+      }
+    }
+
+    // color only snooze label (experimental)
+    &:not(.focused) {
+      .thread-injected-mail-labels {
+        .mail-label{
+          &[style*="color: rgb(214, 201, 242)"] {
+            color: @g-purple2 !important;
+          }
+          &[style*="background-color: rgb(214, 201, 242)"] {
+            background-color: @gray-darker !important;
+            box-shadow: @g-purple2 0 0 1px inset,
+              rgba(255, 255, 255, 0.5) 0 1px 1px inset,
+              rgba(255, 255, 255, 0.5) 0 0.5px 0 !important;
+          }
+          .snooze-mail-label img {
+            background-color: @g-purple2;
+          }
+        }
       }
     }
   }
