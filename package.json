@@ -1,7 +1,7 @@
 {
   "name": "theme-gruvbox",
   "title": "Gruvbox Theme",
-  "displayName": "Gruvbox Theme",
+  "displayName": "Gruvbox",
   "theme": "ui",
   "version": "0.1.0",
   "description": "Gruvbox theme for Mailspring.",
